@@ -1,0 +1,11 @@
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\bin\Debug\Proyecto_Procesamiento_Imagenes.exe.config
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\bin\Debug\Proyecto_Procesamiento_Imagenes.exe
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\bin\Debug\Proyecto_Procesamiento_Imagenes.pdb
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.csproj.AssemblyReference.cache
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.csproj.SuggestedBindingRedirects.cache
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.Form1.resources
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.Properties.Resources.resources
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.csproj.GenerateResource.cache
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.csproj.CoreCompileInputs.cache
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.exe
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.pdb
