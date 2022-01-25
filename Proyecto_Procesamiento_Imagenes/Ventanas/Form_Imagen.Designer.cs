@@ -33,6 +33,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Cargar = new System.Windows.Forms.Button();
             this.img_Imagen = new System.Windows.Forms.PictureBox();
+            this.btn_Filtro1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_Imagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +73,7 @@
             this.btn_Cargar.TabIndex = 14;
             this.btn_Cargar.Text = "Cargar Imagen";
             this.btn_Cargar.UseVisualStyleBackColor = false;
+            this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click);
             // 
             // img_Imagen
             // 
@@ -81,12 +83,27 @@
             this.img_Imagen.TabIndex = 15;
             this.img_Imagen.TabStop = false;
             // 
+            // btn_Filtro1
+            // 
+            this.btn_Filtro1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Filtro1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Filtro1.Font = new System.Drawing.Font("Verdana", 9F);
+            this.btn_Filtro1.Location = new System.Drawing.Point(308, 470);
+            this.btn_Filtro1.Name = "btn_Filtro1";
+            this.btn_Filtro1.Padding = new System.Windows.Forms.Padding(1);
+            this.btn_Filtro1.Size = new System.Drawing.Size(149, 35);
+            this.btn_Filtro1.TabIndex = 16;
+            this.btn_Filtro1.Text = "Grises";
+            this.btn_Filtro1.UseVisualStyleBackColor = false;
+            this.btn_Filtro1.Click += new System.EventHandler(this.btn_Filtro1_Click);
+            // 
             // Form_Imagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1211, 593);
+            this.Controls.Add(this.btn_Filtro1);
             this.Controls.Add(this.img_Imagen);
             this.Controls.Add(this.btn_Cargar);
             this.Controls.Add(this.panel3);
@@ -106,5 +123,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Cargar;
         private System.Windows.Forms.PictureBox img_Imagen;
+        private System.Windows.Forms.Button btn_Filtro1;
     }
 }
