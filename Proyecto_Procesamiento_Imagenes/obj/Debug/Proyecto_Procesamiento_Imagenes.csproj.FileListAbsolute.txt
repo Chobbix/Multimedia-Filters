@@ -18,3 +18,5 @@ C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes
 C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.csproj.CopyComplete
 C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.Ventanas.Form_Camara.resources
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.Ventanas.Form_Imagen.resources
+C:\Users\OMEN\Documents\Semestres FCFM\Octavo Semestre\Procesamiento de Imagenes\Proyecto_Procesamiento_Imagenes\Proyecto_Procesamiento_Imagenes\obj\Debug\Proyecto_Procesamiento_Imagenes.Ventanas.Form_Video.resources

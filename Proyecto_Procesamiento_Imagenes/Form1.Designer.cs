@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_video = new FontAwesome.Sharp.IconButton();
             this.btn_imagen = new FontAwesome.Sharp.IconButton();
             this.btn_camara = new FontAwesome.Sharp.IconButton();
-            this.btn_video = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel_Form = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -51,21 +51,24 @@
             this.panel1.Size = new System.Drawing.Size(1205, 112);
             this.panel1.TabIndex = 3;
             // 
-            // panel3
+            // btn_video
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1005, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 112);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 112);
-            this.panel2.TabIndex = 0;
+            this.btn_video.BackColor = System.Drawing.Color.Transparent;
+            this.btn_video.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_video.FlatAppearance.BorderSize = 0;
+            this.btn_video.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_video.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_video.IconChar = FontAwesome.Sharp.IconChar.Video;
+            this.btn_video.IconColor = System.Drawing.Color.Black;
+            this.btn_video.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_video.Location = new System.Drawing.Point(736, 0);
+            this.btn_video.Name = "btn_video";
+            this.btn_video.Size = new System.Drawing.Size(268, 112);
+            this.btn_video.TabIndex = 3;
+            this.btn_video.Text = "Video";
+            this.btn_video.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_video.UseVisualStyleBackColor = false;
+            this.btn_video.Click += new System.EventHandler(this.btn_video_Click);
             // 
             // btn_imagen
             // 
@@ -105,23 +108,21 @@
             this.btn_camara.UseVisualStyleBackColor = false;
             this.btn_camara.Click += new System.EventHandler(this.btn_camara_Click);
             // 
-            // btn_video
+            // panel3
             // 
-            this.btn_video.BackColor = System.Drawing.Color.Transparent;
-            this.btn_video.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_video.FlatAppearance.BorderSize = 0;
-            this.btn_video.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_video.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_video.IconChar = FontAwesome.Sharp.IconChar.Video;
-            this.btn_video.IconColor = System.Drawing.Color.Black;
-            this.btn_video.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_video.Location = new System.Drawing.Point(736, 0);
-            this.btn_video.Name = "btn_video";
-            this.btn_video.Size = new System.Drawing.Size(268, 112);
-            this.btn_video.TabIndex = 3;
-            this.btn_video.Text = "Video";
-            this.btn_video.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_video.UseVisualStyleBackColor = false;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1005, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 112);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 112);
+            this.panel2.TabIndex = 0;
             // 
             // panel4
             // 
@@ -138,6 +139,7 @@
             this.panel_Form.Name = "panel_Form";
             this.panel_Form.Size = new System.Drawing.Size(1229, 596);
             this.panel_Form.TabIndex = 5;
+            this.panel_Form.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Form_Paint);
             // 
             // Form1
             // 

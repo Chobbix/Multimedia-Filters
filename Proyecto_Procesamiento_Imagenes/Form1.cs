@@ -15,10 +15,6 @@ namespace Proyecto_Procesamiento_Imagenes
 {
     public partial class Form1 : Form
     {
-        private bool isDevice = true;
-        private FilterInfoCollection misDispositivos;
-        private VideoCaptureDevice miWebCam;
-        private bool isFormAbierto = false;
         private Form formActual = null;
 
         public Form1()
@@ -46,19 +42,24 @@ namespace Proyecto_Procesamiento_Imagenes
 
         }
 
-        private void btn_Empezar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
+            AbrirFormSecundario(new Form_Imagen());
         }
 
         private void btn_camara_Click(object sender, EventArgs e)
         {
             AbrirFormSecundario(new Form_Camara());
+        }
+
+        private void btn_video_Click(object sender, EventArgs e)
+        {
+            AbrirFormSecundario(new Form_Video());
+        }
+
+        private void panel_Form_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
