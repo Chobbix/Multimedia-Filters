@@ -70,6 +70,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ventanas\Form_Camara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Form_Camara.Designer.cs">
+      <DependentUpon>Form_Camara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Form_Imagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Form_Imagen.Designer.cs">
+      <DependentUpon>Form_Imagen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Form_Video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Form_Video.Designer.cs">
+      <DependentUpon>Form_Video.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +100,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ventanas\Form_Camara.resx">
+      <DependentUpon>Form_Camara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Form_Imagen.resx">
+      <DependentUpon>Form_Imagen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Form_Video.resx">
+      <DependentUpon>Form_Video.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,7 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clases\" />
-    <Folder Include="Ventanas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using AForge.Video;
+using Proyecto_Procesamiento_Imagenes.Ventanas;
 
 namespace Proyecto_Procesamiento_Imagenes
 {
@@ -17,63 +18,47 @@ namespace Proyecto_Procesamiento_Imagenes
         private bool isDevice = true;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice miWebCam;
+        private bool isFormAbierto = false;
+        private Form formActual = null;
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void AbrirFormSecundario(Form form) 
+        {
+            if (formActual != null) 
+                formActual.Close();
+
+            formActual = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel_Form.Controls.Add(form);
+            panel_Form.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            CargarDispositivos();
-        }
 
-        public void CargarDispositivos() 
-        {
-            misDispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            if (misDispositivos.Count > 0)
-            {
-                isDevice = true;
-                for (int i = 0; i < misDispositivos.Count; i++) 
-                    comboBox1.Items.Add(misDispositivos[i].Name.ToString());
-
-                comboBox1.Text = misDispositivos[0].ToString();
-            }
-            else 
-            {
-                isDevice = false;
-            }
-        }
-
-        public void CerrarWebCam() 
-        {
-            if (miWebCam != null && miWebCam.IsRunning) 
-            {
-                miWebCam.SignalToStop();
-                miWebCam = null;
-            }
         }
 
         private void btn_Empezar_Click(object sender, EventArgs e)
         {
-            CerrarWebCam();
-            int i = comboBox1.SelectedIndex;
-            string NombreVideo = misDispositivos[i].MonikerString;
-            miWebCam = new VideoCaptureDevice(NombreVideo);
-            miWebCam.NewFrame += new NewFrameEventHandler(Capturando);
-            miWebCam.Start();
-        }
-
-        private void Capturando(object sender, NewFrameEventArgs eventArgs) 
-        {
-            Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
-            img_Camara.Image= imagen;
 
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_camara_Click(object sender, EventArgs e)
+        {
+            AbrirFormSecundario(new Form_Camara());
         }
     }
 }

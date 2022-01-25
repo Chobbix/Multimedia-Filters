@@ -28,53 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.img_Camara = new System.Windows.Forms.PictureBox();
-            this.btn_Empezar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Camara)).BeginInit();
+            this.btn_imagen = new FontAwesome.Sharp.IconButton();
+            this.btn_camara = new FontAwesome.Sharp.IconButton();
+            this.btn_video = new FontAwesome.Sharp.IconButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel_Form = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(560, 236);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(285, 24);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // img_Camara
-            // 
-            this.img_Camara.Location = new System.Drawing.Point(191, 266);
-            this.img_Camara.Name = "img_Camara";
-            this.img_Camara.Size = new System.Drawing.Size(856, 414);
-            this.img_Camara.TabIndex = 1;
-            this.img_Camara.TabStop = false;
-            // 
-            // btn_Empezar
-            // 
-            this.btn_Empezar.Location = new System.Drawing.Point(420, 230);
-            this.btn_Empezar.Name = "btn_Empezar";
-            this.btn_Empezar.Padding = new System.Windows.Forms.Padding(1);
-            this.btn_Empezar.Size = new System.Drawing.Size(134, 34);
-            this.btn_Empezar.TabIndex = 2;
-            this.btn_Empezar.Text = "Empezar";
-            this.btn_Empezar.UseVisualStyleBackColor = true;
-            this.btn_Empezar.Click += new System.EventHandler(this.btn_Empezar_Click);
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.iconButton4);
-            this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.btn_video);
+            this.panel1.Controls.Add(this.btn_imagen);
+            this.panel1.Controls.Add(this.btn_camara);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -98,78 +67,77 @@
             this.panel2.Size = new System.Drawing.Size(200, 112);
             this.panel2.TabIndex = 0;
             // 
-            // iconButton2
+            // btn_imagen
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Camera;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(400, 0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(202, 112);
-            this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "Camara";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.btn_imagen.BackColor = System.Drawing.Color.Transparent;
+            this.btn_imagen.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_imagen.FlatAppearance.BorderSize = 0;
+            this.btn_imagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imagen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imagen.IconChar = FontAwesome.Sharp.IconChar.Image;
+            this.btn_imagen.IconColor = System.Drawing.Color.Black;
+            this.btn_imagen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_imagen.Location = new System.Drawing.Point(468, 0);
+            this.btn_imagen.Name = "btn_imagen";
+            this.btn_imagen.Size = new System.Drawing.Size(268, 112);
+            this.btn_imagen.TabIndex = 2;
+            this.btn_imagen.Text = "Imagen";
+            this.btn_imagen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_imagen.UseVisualStyleBackColor = false;
+            this.btn_imagen.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton1
+            // btn_camara
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CameraRetro;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(200, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(200, 112);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "Camara";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btn_camara.BackColor = System.Drawing.Color.Transparent;
+            this.btn_camara.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_camara.FlatAppearance.BorderSize = 0;
+            this.btn_camara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_camara.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_camara.IconChar = FontAwesome.Sharp.IconChar.CameraRetro;
+            this.btn_camara.IconColor = System.Drawing.Color.Black;
+            this.btn_camara.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_camara.Location = new System.Drawing.Point(200, 0);
+            this.btn_camara.Name = "btn_camara";
+            this.btn_camara.Size = new System.Drawing.Size(268, 112);
+            this.btn_camara.TabIndex = 1;
+            this.btn_camara.Text = "Camara";
+            this.btn_camara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_camara.UseVisualStyleBackColor = false;
+            this.btn_camara.Click += new System.EventHandler(this.btn_camara_Click);
             // 
-            // iconButton3
+            // btn_video
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Camera;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(602, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(202, 112);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Camara";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btn_video.BackColor = System.Drawing.Color.Transparent;
+            this.btn_video.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_video.FlatAppearance.BorderSize = 0;
+            this.btn_video.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_video.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_video.IconChar = FontAwesome.Sharp.IconChar.Video;
+            this.btn_video.IconColor = System.Drawing.Color.Black;
+            this.btn_video.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_video.Location = new System.Drawing.Point(736, 0);
+            this.btn_video.Name = "btn_video";
+            this.btn_video.Size = new System.Drawing.Size(268, 112);
+            this.btn_video.TabIndex = 3;
+            this.btn_video.Text = "Video";
+            this.btn_video.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_video.UseVisualStyleBackColor = false;
             // 
-            // iconButton4
+            // panel4
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Camera;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(804, 0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(200, 112);
-            this.iconButton4.TabIndex = 4;
-            this.iconButton4.Text = "Camara";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1229, 137);
+            this.panel4.TabIndex = 4;
+            // 
+            // panel_Form
+            // 
+            this.panel_Form.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Form.Location = new System.Drawing.Point(0, 137);
+            this.panel_Form.Name = "panel_Form";
+            this.panel_Form.Size = new System.Drawing.Size(1229, 596);
+            this.panel_Form.TabIndex = 5;
             // 
             // Form1
             // 
@@ -177,30 +145,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1229, 733);
+            this.Controls.Add(this.panel_Form);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_Empezar);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.img_Camara);
+            this.Controls.Add(this.panel4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.img_Camara)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox img_Camara;
-        private System.Windows.Forms.Button btn_Empezar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btn_camara;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton btn_imagen;
+        private FontAwesome.Sharp.IconButton btn_video;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel_Form;
     }
 }
