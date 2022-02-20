@@ -80,6 +80,7 @@
             this.btn_Cargar.TabIndex = 16;
             this.btn_Cargar.Text = "Cargar Video";
             this.btn_Cargar.UseVisualStyleBackColor = false;
+            this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click);
             // 
             // Form_Video
             // 

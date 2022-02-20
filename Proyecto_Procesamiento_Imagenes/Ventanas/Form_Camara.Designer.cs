@@ -33,6 +33,8 @@
             this.img_Camara = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_Contador = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_Camara)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +85,34 @@
             this.panel2.Size = new System.Drawing.Size(150, 593);
             this.panel2.TabIndex = 7;
             // 
+            // lbl_Contador
+            // 
+            this.lbl_Contador.AutoSize = true;
+            this.lbl_Contador.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contador.Location = new System.Drawing.Point(547, 566);
+            this.lbl_Contador.Name = "lbl_Contador";
+            this.lbl_Contador.Size = new System.Drawing.Size(18, 18);
+            this.lbl_Contador.TabIndex = 8;
+            this.lbl_Contador.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(281, 566);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Cantidad de personas en camara:";
+            // 
             // Form_Camara
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1211, 593);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Contador);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.img_Camara);
@@ -99,6 +123,7 @@
             this.Load += new System.EventHandler(this.Form_Camara_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_Camara)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +134,7 @@
         private System.Windows.Forms.PictureBox img_Camara;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_Contador;
+        private System.Windows.Forms.Label label1;
     }
 }

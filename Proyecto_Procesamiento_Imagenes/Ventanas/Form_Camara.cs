@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using AForge.Video;
+using Emgu.CV;
+using Emgu.CV.Structure;
+using Emgu.CV.Face;
+using Proyecto_Procesamiento_Imagenes.Clases;
 
 namespace Proyecto_Procesamiento_Imagenes.Ventanas
 {
@@ -17,6 +21,10 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
         private bool isDevice = true;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice miWebCam;
+        private int contadorPersonas = 0;
+        Filtros filtros = new Filtros();
+
+        static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
 
         public Form_Camara()
         {
@@ -62,11 +70,29 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
             miWebCam = new VideoCaptureDevice(NombreVideo);
             miWebCam.NewFrame += new NewFrameEventHandler(Capturando);
             miWebCam.Start();
+            lbl_Contador.Text = contadorPersonas.ToString();
         }
 
         private void Capturando(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
+
+            Image<Bgr, byte> nuevaImagen = new Image<Bgr, byte> (imagen);
+            Rectangle[] rectangulos = cascadeClassifier.DetectMultiScale(nuevaImagen, 1.2, 1);
+
+            contadorPersonas = 0;
+            foreach (Rectangle rectangulo in rectangulos)
+            {
+                Graphics graphics = Graphics.FromImage(imagen);
+                Pen pen = new Pen(Color.Red, 3);
+                graphics.DrawRectangle(pen, rectangulo);
+
+                contadorPersonas++;
+            }
+
+            if (InvokeRequired)
+                Invoke(new Action(() => lbl_Contador.Text = contadorPersonas.ToString()));
+
             img_Camara.Image = imagen;
         }
     }
