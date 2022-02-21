@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.Structure;
+using Proyecto_Procesamiento_Imagenes.Clases;
 
 namespace Proyecto_Procesamiento_Imagenes.Ventanas
 {
@@ -16,7 +18,8 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
     {
         VideoCapture videoCapture;
         bool pause = false;
-        
+        Filtros_videos filtros = new Filtros_videos();
+
 
         public Form_Video()
         {
@@ -39,8 +42,16 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
 
                     if(!m.IsEmpty)
                     {
-                        img_Video.Image = m.Bitmap;
+                        //img_Video.Image = m.Bitmap;
+                        //img_Video.SizeMode = PictureBoxSizeMode.StretchImage;
+                        //img_Video.Image = filtros.Escala_Grises(m.Bitmap);
+                        
+
+                        Bitmap bitmapResultante = filtros.Filtro_Invertido(m.Bitmap);
+
+                        img_Video.Image = bitmapResultante;
                         img_Video.SizeMode = PictureBoxSizeMode.StretchImage;
+
                         double fps = videoCapture.GetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps);
                         await Task.Delay(1000/Convert.ToInt32(fps));
                     }
@@ -50,6 +61,11 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
                     }
                 }
             }
+        }
+
+        private void btn_Filtro1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
