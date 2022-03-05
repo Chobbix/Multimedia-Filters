@@ -34,6 +34,10 @@
             this.img_Video = new System.Windows.Forms.PictureBox();
             this.btn_Cargar = new System.Windows.Forms.Button();
             this.btn_Filtro1 = new System.Windows.Forms.Button();
+            this.btn_Filtro5 = new System.Windows.Forms.Button();
+            this.btn_Filtro4 = new System.Windows.Forms.Button();
+            this.btn_Filtro3 = new System.Windows.Forms.Button();
+            this.btn_Filtro2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_Video)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +92,7 @@
             this.btn_Filtro1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Filtro1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Filtro1.Font = new System.Drawing.Font("Verdana", 9F);
-            this.btn_Filtro1.Location = new System.Drawing.Point(308, 470);
+            this.btn_Filtro1.Location = new System.Drawing.Point(217, 470);
             this.btn_Filtro1.Name = "btn_Filtro1";
             this.btn_Filtro1.Padding = new System.Windows.Forms.Padding(1);
             this.btn_Filtro1.Size = new System.Drawing.Size(149, 35);
@@ -97,12 +101,68 @@
             this.btn_Filtro1.UseVisualStyleBackColor = false;
             this.btn_Filtro1.Click += new System.EventHandler(this.btn_Filtro1_Click);
             // 
+            // btn_Filtro5
+            // 
+            this.btn_Filtro5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Filtro5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Filtro5.Font = new System.Drawing.Font("Verdana", 9F);
+            this.btn_Filtro5.Location = new System.Drawing.Point(837, 470);
+            this.btn_Filtro5.Name = "btn_Filtro5";
+            this.btn_Filtro5.Padding = new System.Windows.Forms.Padding(1);
+            this.btn_Filtro5.Size = new System.Drawing.Size(149, 35);
+            this.btn_Filtro5.TabIndex = 24;
+            this.btn_Filtro5.Text = "Binario";
+            this.btn_Filtro5.UseVisualStyleBackColor = false;
+            // 
+            // btn_Filtro4
+            // 
+            this.btn_Filtro4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Filtro4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Filtro4.Font = new System.Drawing.Font("Verdana", 9F);
+            this.btn_Filtro4.Location = new System.Drawing.Point(682, 470);
+            this.btn_Filtro4.Name = "btn_Filtro4";
+            this.btn_Filtro4.Padding = new System.Windows.Forms.Padding(1);
+            this.btn_Filtro4.Size = new System.Drawing.Size(149, 35);
+            this.btn_Filtro4.TabIndex = 23;
+            this.btn_Filtro4.Text = "Brillo";
+            this.btn_Filtro4.UseVisualStyleBackColor = false;
+            // 
+            // btn_Filtro3
+            // 
+            this.btn_Filtro3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Filtro3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Filtro3.Font = new System.Drawing.Font("Verdana", 9F);
+            this.btn_Filtro3.Location = new System.Drawing.Point(527, 470);
+            this.btn_Filtro3.Name = "btn_Filtro3";
+            this.btn_Filtro3.Padding = new System.Windows.Forms.Padding(1);
+            this.btn_Filtro3.Size = new System.Drawing.Size(149, 35);
+            this.btn_Filtro3.TabIndex = 22;
+            this.btn_Filtro3.Text = "Color rojo";
+            this.btn_Filtro3.UseVisualStyleBackColor = false;
+            // 
+            // btn_Filtro2
+            // 
+            this.btn_Filtro2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Filtro2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Filtro2.Font = new System.Drawing.Font("Verdana", 9F);
+            this.btn_Filtro2.Location = new System.Drawing.Point(372, 470);
+            this.btn_Filtro2.Name = "btn_Filtro2";
+            this.btn_Filtro2.Padding = new System.Windows.Forms.Padding(1);
+            this.btn_Filtro2.Size = new System.Drawing.Size(149, 35);
+            this.btn_Filtro2.TabIndex = 21;
+            this.btn_Filtro2.Text = "Invertido";
+            this.btn_Filtro2.UseVisualStyleBackColor = false;
+            // 
             // Form_Video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1211, 593);
+            this.Controls.Add(this.btn_Filtro5);
+            this.Controls.Add(this.btn_Filtro4);
+            this.Controls.Add(this.btn_Filtro3);
+            this.Controls.Add(this.btn_Filtro2);
             this.Controls.Add(this.btn_Filtro1);
             this.Controls.Add(this.img_Video);
             this.Controls.Add(this.btn_Cargar);
@@ -124,5 +184,9 @@
         private System.Windows.Forms.PictureBox img_Video;
         private System.Windows.Forms.Button btn_Cargar;
         private System.Windows.Forms.Button btn_Filtro1;
+        private System.Windows.Forms.Button btn_Filtro5;
+        private System.Windows.Forms.Button btn_Filtro4;
+        private System.Windows.Forms.Button btn_Filtro3;
+        private System.Windows.Forms.Button btn_Filtro2;
     }
 }

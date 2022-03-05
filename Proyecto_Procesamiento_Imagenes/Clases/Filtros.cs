@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Proyecto_Procesamiento_Imagenes.Clases
     {
         public Filtros() { }
 
-        public Bitmap Escala_Grises(Bitmap original) 
+        public Bitmap Filtro_Escala_Grises(Bitmap original) 
         {
             Bitmap nuevo = null;
 
@@ -33,6 +34,72 @@ namespace Proyecto_Procesamiento_Imagenes.Clases
 
             nuevo = original;
             return nuevo;
+        }
+
+        public Bitmap Filtro_Invertido(Image img)
+        {
+            Bitmap bmpinverted = new Bitmap(img.Width, img.Height);
+            ImageAttributes Ia = new ImageAttributes();
+            ColorMatrix cmPicture = new ColorMatrix(new float[][]
+            {
+                new float[]{-1, 0, 0, 0, 0},
+                new float[]{0, -1, 0, 0, 0},
+                new float[]{0, 0, -1, 0, 0},
+                new float[]{0, 0, 0, 1, 0},
+                new float[]{1, 1, 1, 0, 1}
+            });
+
+            Ia.SetColorMatrix(cmPicture);
+            Graphics gr = Graphics.FromImage(bmpinverted);
+
+            gr.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, Ia);
+            gr.Dispose();
+
+            return bmpinverted;
+        }
+
+        public Bitmap Filtro_Color_Rojo(Image img)
+        {
+            Bitmap bmpinverted = new Bitmap(img.Width, img.Height);
+            ImageAttributes Ia = new ImageAttributes();
+            ColorMatrix cmPicture = new ColorMatrix(new float[][]
+            {
+                new float[]{1, 0, 0, 0, 0},
+                new float[]{0, 0, 0, 0, 0},
+                new float[]{0, 0, 0, 0, 0},
+                new float[]{0, 0, 0, 1, 0},
+                new float[]{0, 0, 0, 0, 1}
+            });
+
+            Ia.SetColorMatrix(cmPicture);
+            Graphics gr = Graphics.FromImage(bmpinverted);
+
+            gr.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, Ia);
+            gr.Dispose();
+
+            return bmpinverted;
+        }
+
+        public Bitmap Filtro_Brillo(Image img)
+        {
+            Bitmap bmpinverted = new Bitmap(img.Width, img.Height);
+            ImageAttributes Ia = new ImageAttributes();
+            ColorMatrix cmPicture = new ColorMatrix(new float[][]
+            {
+                new float[]{1, 0, 0, 0, 0},
+                new float[]{0, 1, 0, 0, 0},
+                new float[]{0, 0, 1, 0, 0},
+                new float[]{0, 0, 0, 1, 0},
+                new float[]{.5f, .5f, .5f, 0, 1}
+            });
+
+            Ia.SetColorMatrix(cmPicture);
+            Graphics gr = Graphics.FromImage(bmpinverted);
+
+            gr.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, Ia);
+            gr.Dispose();
+
+            return bmpinverted;
         }
     }
 }
