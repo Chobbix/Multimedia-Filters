@@ -23,12 +23,14 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
         private VideoCaptureDevice miWebCam;
         private int contadorPersonas = 0;
         Filtros filtros = new Filtros();
+        private Color[] colorCamCapture = new Color[10];
 
         static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
 
         public Form_Camara()
         {
             InitializeComponent();
+            InicializarColoresArray();
         }
 
         private void Form_Camara_Load(object sender, EventArgs e)
@@ -84,7 +86,7 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
             foreach (Rectangle rectangulo in rectangulos)
             {
                 Graphics graphics = Graphics.FromImage(imagen);
-                Pen pen = new Pen(Color.Red, 3);
+                Pen pen = new Pen(colorCamCapture[contadorPersonas], 3);
                 graphics.DrawRectangle(pen, rectangulo);
 
                 contadorPersonas++;
@@ -94,6 +96,25 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
                 Invoke(new Action(() => lbl_Contador.Text = contadorPersonas.ToString()));
 
             img_Camara.Image = imagen;
+        }
+
+        private void InicializarColoresArray() 
+        {
+            colorCamCapture[0] = Color.Red;
+            colorCamCapture[1] = Color.Green;
+            colorCamCapture[2] = Color.Blue;
+            colorCamCapture[3] = Color.Black;
+            colorCamCapture[4] = Color.Coral;
+            colorCamCapture[5] = Color.Red;
+            colorCamCapture[6] = Color.Green;
+            colorCamCapture[7] = Color.Blue;
+            colorCamCapture[8] = Color.Black;
+            colorCamCapture[9] = Color.Coral;
+        }
+
+        private void Form_Camara_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CerrarWebCam();
         }
     }
 }

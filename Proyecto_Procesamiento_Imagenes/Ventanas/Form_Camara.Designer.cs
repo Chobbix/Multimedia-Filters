@@ -120,6 +120,7 @@
             this.Controls.Add(this.btn_Empezar);
             this.Name = "Form_Camara";
             this.Text = "Form_Camara";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Camara_FormClosed);
             this.Load += new System.EventHandler(this.Form_Camara_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_Camara)).EndInit();
             this.ResumeLayout(false);
