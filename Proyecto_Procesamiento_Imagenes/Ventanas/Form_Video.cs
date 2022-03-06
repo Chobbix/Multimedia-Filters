@@ -19,6 +19,7 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
         VideoCapture videoCapture;
         bool pause = false;
         Filtros_videos filtros = new Filtros_videos();
+        int tipoFiltro = 0;
 
 
         public Form_Video()
@@ -45,9 +46,39 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
                         //img_Video.Image = m.Bitmap;
                         //img_Video.SizeMode = PictureBoxSizeMode.StretchImage;
                         //img_Video.Image = filtros.Escala_Grises(m.Bitmap);
-                        
 
-                        Bitmap bitmapResultante = filtros.Filtro_Invertido(m.Bitmap);
+                        Bitmap bitmapResultante;
+
+                        switch (tipoFiltro)
+                        {
+                            case 0:
+                                bitmapResultante = m.Bitmap;
+                                break;
+
+                            case 1:
+                                bitmapResultante = filtros.Filtro_Escala_Grises(m.Bitmap);
+                                break;
+
+                            case 2:
+                                bitmapResultante = filtros.Filtro_Invertido(m.Bitmap);
+                                break;
+
+                            case 3:
+                                bitmapResultante = filtros.Filtro_Color_Rojo(m.Bitmap);
+                                break;
+
+                            case 4:
+                                bitmapResultante = filtros.Filtro_Brillo(m.Bitmap);
+                                break;
+
+                            case 5:
+                                bitmapResultante = filtros.Filtro_Binario(m.Bitmap);
+                                break;
+
+                            default:
+                                bitmapResultante = m.Bitmap;
+                                break;
+                        }
 
                         img_Video.Image = bitmapResultante;
                         img_Video.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -65,7 +96,32 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
 
         private void btn_Filtro1_Click(object sender, EventArgs e)
         {
+            tipoFiltro = 1;
+        }
 
+        private void btn_Filtro2_Click(object sender, EventArgs e)
+        {
+            tipoFiltro = 2;
+        }
+
+        private void btn_Filtro3_Click(object sender, EventArgs e)
+        {
+            tipoFiltro = 3;
+        }
+
+        private void btn_Filtro4_Click(object sender, EventArgs e)
+        {
+            tipoFiltro = 4;
+        }
+
+        private void btn_Filtro5_Click(object sender, EventArgs e)
+        {
+            tipoFiltro = 5;
+        }
+
+        private void btn_Restaurar_Click(object sender, EventArgs e)
+        {
+            tipoFiltro = 0;
         }
     }
 }

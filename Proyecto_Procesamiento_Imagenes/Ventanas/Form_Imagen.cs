@@ -66,7 +66,7 @@ namespace Proyecto_Procesamiento_Imagenes.Ventanas
         {
             obtener_Imagen_Original();
             Bitmap copia = new Bitmap(img_Imagen.Image);
-            img_Imagen.Image = filtros.Filtro_Brillo(copia);
+            img_Imagen.Image = filtros.Filtro_Binario(copia);
         }
 
         private void btn_Restaurar_Click(object sender, EventArgs e)
